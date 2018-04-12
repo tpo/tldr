@@ -4,7 +4,7 @@
 
 - Open an `at` prompt to create a new set of scheduled commands, press `Ctrl + D` to save and exit:
 
-`at {{hh:mm:ss}}`
+`at {{hh:mm:ss}}` or `at {{yyyy-mm-dd hh:mm:ss}}`
 
 - Execute the commands and email the result using a local mailing program such as sendmail:
 
@@ -13,3 +13,7 @@
 - Execute a script at the given time:
 
 `at {{hh:mm:ss}} -f {{path/to/file}}`
+
+- Pass the command via STDIN:
+
+`echo "touch /tmp/foo" | at now + 5 min`
